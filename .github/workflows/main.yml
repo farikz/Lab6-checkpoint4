@@ -16,7 +16,7 @@ jobs:
         run: cd test-workflow/src && npm install  
 
       - name: Run tests
-        run: npm test  
+        run: cd test-workflow/src && npm test  
 
   deploy:
     runs-on: ubuntu-latest
