@@ -12,14 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2  
 
-      - name: Navigate to src folder
-        run: cd src  
-
-      - name: Install dependencies
-        run: npm install  
+      - name: Navigate to src folder and install dependencies
+        run: cd test-workflow/src && npm install  
 
       - name: Run tests
-        run: npm test 
+        run: npm test  
 
   deploy:
     runs-on: ubuntu-latest
@@ -27,4 +24,3 @@ jobs:
     steps:
       - name: Deploy Application
         run: echo "Deploying application..."
-       
